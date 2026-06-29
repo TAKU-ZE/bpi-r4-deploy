@@ -70,6 +70,10 @@ echo "CONFIG_PACKAGE_trusted-firmware-a-mt7988-emmc-comb-4bg=y" >> .config
 echo "CONFIG_PACKAGE_trusted-firmware-a-mt7988-sdmmc-comb-4bg=y" >> .config
 echo "CONFIG_PACKAGE_trusted-firmware-a-mt7988-spim-nand-ubi-comb-4bg=y" >> .config
 
+# --- fleth IPIP6H deps: build ip6_tunnel + nat46 as kernel modules (kernel-matched) ---
+echo "CONFIG_PACKAGE_kmod-ip6-tunnel=m" >> .config
+echo "CONFIG_PACKAGE_kmod-nat46=m" >> .config
+
 bash ../mtk-openwrt-feeds/autobuild/unified/autobuild.sh filogic-mac80211-mt798x_rfb-wifi7_nic build
 
 
